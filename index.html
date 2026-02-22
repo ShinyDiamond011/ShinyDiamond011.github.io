@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dion Gabriel L. Tabanao - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ── API #3: Leaflet.js CSS (OpenStreetMap) ── -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>DGT<span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home"     class="nav-link">Home</a></li>
+                <li><a href="#about"    class="nav-link">About</a></li>
+                <li><a href="#skills"   class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact"  class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-image-panel">
+            <img src="images/DionG.jpg" alt="Dion Gabriel L. Tabanao" class="hero-photo">
+            <div class="hero-image-overlay"></div>
+        </div>
+        <div class="hero-content-panel">
+            <div class="hero-diamond hero-diamond-1"></div>
+            <div class="hero-diamond hero-diamond-2"></div>
+            <div class="hero-diamond hero-diamond-3"></div>
+            <div class="hero-diamond hero-diamond-4"></div>
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="label-text">Tech Enthusiast &amp; Developer in Progress</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="name-line">Dion Gabriel</span>
+                    <span class="name-line name-accent">L. Tabanao</span>
+                </h1>
+                <div class="hero-identity">
+                    <span class="hero-fullname">My Portfolio</span>
+                </div>
+                <div class="hero-divider"></div>
+                <div class="hero-credentials">
+                    <div class="credential-item">
+                        <svg class="credential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                        </svg>
+                        <div class="credential-text">
+                            <span class="credential-label">Course</span>
+                            <span class="credential-value">BS Information Technology</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <svg class="credential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <div class="credential-text">
+                            <span class="credential-label">Specialization</span>
+                            <span class="credential-value">Backend Development</span>
+                        </div>
+                    </div>
+                    <div class="credential-item">
+                        <svg class="credential-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div class="credential-text">
+                            <span class="credential-label">Institution</span>
+                            <span class="credential-value">Camarines Norte State College</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="hero-intro">
+                    I am passionate about turning ideas into reality through technology. I have a strong interest in understanding how systems work behind the scenes and enjoy working with the technical aspects of development. I am especially motivated to create solutions that simplify processes and improve people's everyday lives.
+                </p>
+                <div class="hero-tech-strip">
+                    <span class="tech-pill">Java</span>
+                    <span class="tech-pill">HTML</span>
+                    <span class="tech-pill">CSS</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">Android Studio</span>
+                    <span class="tech-pill">MySQL</span>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
+                        <span>Explore Now</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        <span>Get in Touch</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <span class="section-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                About Me
+            </span>
+            <h2 class="section-title">Who I Am</h2>
+            <p class="section-subtitle">A dedicated developer with a passion for creating innovative solutions</p>
+        </div>
+        <div class="about-content">
+            <div class="about-main">
+                <div class="about-text">
+                    <h3>Personal Background</h3>
+                    <p>I am a passionate Information Technology student at Camarines Norte State College, currently pursuing a Bachelor of Science in Information Technology with a focus on backend development. Through my studies, I continue to strengthen my technical skills while exploring different areas of technology that allow me to build practical and reliable solutions.</p>
+                    <p>From an early age, I developed a strong curiosity for technology, which naturally guided me toward this field. I am driven by the desire to create tools and applications that can make everyday tasks easier and more enjoyable for people and communities. I am particularly drawn to the more hands-on and creative side of technology, especially areas like interactive applications and game-related development, where I can combine technical problem-solving with creativity.</p>
+                    <h3>Career Goals</h3>
+                    <p>My primary goal is to become a skilled backend developer, with the long-term aim of growing into a full-stack developer. I hope to work on projects that create meaningful impact and provide value to people across different communities. I am also interested in contributing to game development, creating experiences that bring enjoyment and positivity to others.</p>
+                    <p>I am committed to continuously improving my technical skills and expanding my knowledge so I can build solutions that remain useful in the long run. In the future, I hope to contribute to large-scale technology initiatives and take on greater responsibilities, including collaborating with and eventually leading teams to develop innovative digital products.</p>
+                    <h3>Areas of Interest in IT</h3>
+                    <div class="interest-list">
+                        <div class="interest-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                            <div><strong>Web Development</strong><span>Creating responsive and dynamic web applications using modern frameworks and technologies</span></div>
+                        </div>
+                        <div class="interest-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                            <div><strong>Mobile Application Development</strong><span>Building cross-platform mobile apps with intuitive user interfaces</span></div>
+                        </div>
+                        <div class="interest-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            <div><strong>Backend Development</strong><span>Designing robust server-side architectures and database management systems</span></div>
+                        </div>
+                        <div class="interest-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <div><strong>Game Development</strong><span>Crafting engaging interactive experiences and educational games</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-sidebar">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                        <h4>Connect With Me</h4>
+                    </div>
+                    <a href="https://www.linkedin.com/in/dion-gabriel-tabanao-9b050a386/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <span>View LinkedIn Profile</span>
+                    </a>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h4>Certifications</h4>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">🏆</div>
+                            <div><strong>CSS NC II COC 1</strong><span>Computer Systems Servicing</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                        <h4>Education</h4>
+                    </div>
+                    <div class="edu-item">
+                        <strong>Camarines Norte State College</strong>
+                        <span>BS Information Technology</span>
+                        <span class="current-badge">Current</span>
+                    </div>
+                    <div class="edu-item">
+                        <strong>Camarines Norte National High School</strong>
+                        <span>Senior High School - With High Honors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <span class="section-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                Technical Skills
+            </span>
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="section-subtitle">A comprehensive overview of my technical capabilities and tools</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="category-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <h3>Programming Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/java.png" alt="Java"><span>Java</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/javascript.png" alt="JavaScript"><span>JavaScript</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/cpp.png" alt="C++"><span>C++</span></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    <h3>Web Technologies</h3>
+                </div>
+                <div class="skill-tags">
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/html5.png" alt="HTML5"><span>HTML5</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/css3.png" alt="CSS3"><span>CSS3</span></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    <h3>Databases</h3>
+                </div>
+                <div class="skill-tags">
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/mysql.png" alt="MySQL"><span>MySQL</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/sqlite.png" alt="SQLite"><span>SQLite</span></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <div class="category-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                    <h3>Tools & Frameworks</h3>
+                </div>
+                <div class="skill-tags">
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/androidstudio.png" alt="Android Studio"><span>Android Studio</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/github.png" alt="Git & GitHub"><span>Git & GitHub</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/nodejs.png" alt="Node.js"><span>Node.js</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/vscode.png" alt="VS Code"><span>VS Code</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/intellij.png" alt="IntelliJ IDEA"><span>IntelliJ IDEA</span></div>
+                    <div class="skill-tag"><img class="skill-icon" src="images/icons/figma.png" alt="Figma"><span>Figma</span></div>
+                </div>
+            </div>
+            <div class="skill-category highlight">
+                <div class="category-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <h3>Core Competencies</h3>
+                </div>
+                <div class="competency-grid">
+                    <div class="competency-item">
+                        <div class="competency-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+                        <h4>Backend Development</h4>
+                        <p>Building robust server-side applications and APIs</p>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+                        <h4>Problem Solving</h4>
+                        <p>Quick solutions for complex technical challenges</p>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+                        <h4>Mobile Development</h4>
+                        <p>Creating cross-platform mobile applications</p>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+                        <h4>Game Development</h4>
+                        <p>Crafting engaging interactive experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <span class="section-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5M18 12l-3-3m0 0l-3 3m3-3v12"/></svg>
+                Featured Projects
+            </span>
+            <h2 class="section-title">My Work</h2>
+            <p class="section-subtitle">Showcasing innovative solutions and creative applications I've developed</p>
+        </div>
+        <div class="projects-bento">
+            <div class="project-featured">
+                <div class="project-featured-image">
+                    <img src="images/lastshot.png" alt="Last Shot" class="project-image">
+                    <div class="project-featured-overlay"></div>
+                    <span class="project-featured-number">01</span>
+                </div>
+                <div class="project-featured-content">
+                    <div class="project-featured-top">
+                        <span class="project-type-tag">Game Development</span>
+                        <span class="project-status">Terminal-Based</span>
+                    </div>
+                    <h3 class="project-featured-title">Last Shot</h3>
+                    <p class="project-featured-desc">A terminal-based survival game built around the queue data structure, where players defend against incoming enemies using a cannon with various ammunition types. The gameplay highlights strategic sequencing, quick decision-making, and efficient resource use.</p>
+                    <div class="project-featured-footer">
+                        <div class="tech-tags"><span>Java</span><span>Maven</span><span>IntelliJ</span></div>
+                        <div class="project-featured-links">
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-row">
+                <div class="project-horizontal">
+                    <div class="project-horizontal-image">
+                        <img src="images/scibrain.png" alt="SciBrain" class="project-image">
+                        <span class="project-horizontal-number">02</span>
+                    </div>
+                    <div class="project-horizontal-content">
+                        <div class="project-horizontal-top"><span class="project-type-tag">Web Platform</span></div>
+                        <h3>SciBrain</h3>
+                        <p>Developed in collaboration with a research team of Grade 12 STEM students from Our Lady Of Lourdes College Foundation and my partner, Emilyn Tagaan, this project is a web-based platform designed to generate comprehensive science reviewers using user-provided learning materials.</p>
+                        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>NodeJs</span><span>SQLite</span></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-horizontal">
+                    <div class="project-horizontal-image">
+                        <img src="images/alamatiko.png" alt="Alamatiko" class="project-image">
+                        <span class="project-horizontal-number">03</span>
+                    </div>
+                    <div class="project-horizontal-content">
+                        <div class="project-horizontal-top"><span class="project-type-tag">Mobile App</span></div>
+                        <h3>Alamatiko</h3>
+                        <p>A mobile application showcasing Filipino cultural collections of Alamat (legends) and Epiko (epics) for cultural preservation and education. Features interactive storytelling and rich multimedia content.</p>
+                        <div class="tech-tags"><span>Android Studio</span><span>Java</span><span>Firebase</span><span>XML</span></div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live Demo</a>
+                            <a href="#" class="project-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Other Projects Expandable Image Gallery ── -->
+        <div class="other-projects-wrapper">
+            <button class="other-projects-toggle" id="otherProjectsToggle" aria-expanded="false">
+                <span class="toggle-label">Other Projects</span>
+                <span class="toggle-count">+4</span>
+                <svg class="toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+
+            <div class="other-projects-panel" id="otherProjectsPanel" aria-hidden="true">
+                <div class="other-projects-grid">
+
+                    <!-- Image 1 -->
+                    <div class="op-img-card">
+                        <img src="images/formative1.png" alt="Project 4">
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="op-img-card">
+                        <img src="images/formative2.png" alt="Project 5">
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="op-img-card">
+                        <img src="images/formative3.png" alt="Project 6">
+                    </div>
+
+                    <!-- Image 4
+                    <div class="op-img-card">
+                        <img src="images/f.png" alt="Project 7">
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-tag light">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    Get in Touch
+                </span>
+                <h2 class="section-title light">Let's Create Something Amazing</h2>
+                <p class="section-subtitle light">Have a project in mind? Let's discuss how we can bring your ideas to life</p>
+            </div>
+
+            <!-- Row 1: existing 3 contact cards -->
+            <div class="contact-methods">
+                <a href="mailto:diongabtabz01@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3>Email Me</h3>
+                    <p>diongabtabz01@gmail.com</p>
+                </a>
+                <a href="tel:+639070010233" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3>Call Me</h3>
+                    <p>+63 907 001 0233</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dion-gabriel-tabanao-9b050a386/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me</p>
+                </a>
+            </div>
+
+            <!-- Row 2: EmailJS form + Leaflet map -->
+            <div class="contact-bottom">
+
+                <!-- API #2: EmailJS Contact Form — Transaction #1 -->
+                <div class="contact-form-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Send Me a Message
+                    </h3>
+                    <form id="contact-form" novalidate>
+                        <div class="cf-row">
+                            <div class="cf-field">
+                                <label for="cf-name">Your Name</label>
+                                <input type="text" id="cf-name" class="cf-input" placeholder="Dion Gabriel Tabanao" autocomplete="name">
+                                <span id="cf-name-error" class="cf-field-error"></span>
+                            </div>
+                            <div class="cf-field">
+                                <label for="cf-email">Email Address</label>
+                                <input type="email" id="cf-email" class="cf-input" placeholder="diongab@example.com" autocomplete="email">
+                                <span id="cf-email-error" class="cf-field-error"></span>
+                            </div>
+                        </div>
+                        <div class="cf-field">
+                            <label for="cf-subject">Subject</label>
+                            <input type="text" id="cf-subject" class="cf-input" placeholder="Project inquiry, collaboration, etc.">
+                            <span id="cf-subject-error" class="cf-field-error"></span>
+                        </div>
+                        <div class="cf-field">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" class="cf-textarea" rows="5" placeholder="Tell me about your project or what you'd like to discuss…"></textarea>
+                            <span id="cf-message-error" class="cf-field-error"></span>
+                        </div>
+                        <button type="submit" id="cf-submit-btn" class="cf-submit-btn">
+                            <span class="cf-spinner" id="cf-btn-spinner"></span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            <span id="cf-btn-text">Send Message</span>
+                        </button>
+                        <div id="cf-success" class="cf-success">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Message sent! I'll get back to you as soon as possible.
+                        </div>
+                        <div id="cf-error" class="cf-error-msg">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            Something went wrong. Please email me directly at diongabtabz01@gmail.com
+                        </div>
+                    </form>
+                </div>
+
+                <!-- API #3: Leaflet + OpenStreetMap -->
+                <div class="contact-map-card">
+                    <div class="map-card-header">
+                        <div>
+                            <h3>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                My Location
+                            </h3>
+                            <p>Purok 1, Brgy. Camambugan<br>Daet, Camarines Norte, Philippines</p>
+                        </div>
+                         <a href="https://www.google.com/maps?q=14.104402,122.947862"
+                            target="_blank" rel="noopener noreferrer" class="map-open-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            Open in Maps
+                        </a>
+                    </div>
+                    <div id="contact-map"></div>
+                </div>
+
+            </div><!-- /.contact-bottom -->
+        </div><!-- /.contact-container -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dion Gabriel L. Tabanao</h3>
+                <p>Tech Enthusiast & Developer in Progress</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/shiny.diamond.011" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/dio_nysus_exe/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dion-gabriel-tabanao-9b050a386/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="donation-widget">
+            <div class="donation-inner">
+                <div class="donation-label">
+                    <span class="donation-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                            <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+                        </svg>
+                        Optional Support
+                    </span>
+                    <h4>Buy Me a Coffee</h4>
+                    <p>If you enjoyed my work, a small token of support means a lot and keeps me building more.</p>
+                    <span class="don-secure-note">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                        Simulated — no real charge
+                    </span>
+                </div>
+                <div class="donation-form-area">
+                    <form id="donation-form" novalidate>
+                        <div class="don-amounts">
+                            <button type="button" class="don-preset" data-amount="50">₱50</button>
+                            <button type="button" class="don-preset active" data-amount="100">₱100</button>
+                            <button type="button" class="don-preset" data-amount="200">₱200</button>
+                            <span class="don-divider">or</span>
+                            <div class="don-custom-wrap">
+                                <span class="don-currency">₱</span>
+                                <input type="number" id="don-amount-custom" class="don-input" placeholder="Custom" min="1" step="1">
+                            </div>
+                        </div>
+                        <span id="don-amount-custom-error" class="don-inline-error"></span>
+                        <div class="don-card-brand-row">
+                            <input type="text" id="don-card-number" class="don-input"
+                                   placeholder="Card number  (try 4242 4242 4242 4242)"
+                                   maxlength="19" inputmode="numeric" autocomplete="cc-number" style="flex:1;">
+                            <span id="don-card-brand"></span>
+                        </div>
+                        <span id="don-card-number-error" class="don-inline-error"></span>
+                        <div class="don-card-row">
+                            <div>
+                                <input type="text" id="don-expiry" class="don-input" placeholder="MM/YY" maxlength="5" inputmode="numeric" autocomplete="cc-exp">
+                                <span id="don-expiry-error" class="don-inline-error"></span>
+                            </div>
+                            <div>
+                                <input type="text" id="don-cvv" class="don-input" placeholder="CVV" maxlength="4" inputmode="numeric" autocomplete="cc-csc">
+                                <span id="don-cvv-error" class="don-inline-error"></span>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="don-bottom-row">
+                            <div>
+                                <input type="text" id="don-card-name" class="don-input" placeholder="Cardholder name" autocomplete="cc-name">
+                                <span id="don-card-name-error" class="don-inline-error"></span>
+                            </div>
+                            <button type="submit" id="don-submit-btn" class="don-submit-btn">
+                                <span class="don-spinner" id="don-spinner"></span>
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                                    <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/>
+                                </svg>
+                                <span id="don-btn-text">Support Now</span>
+                            </button>
+                        </div>
+                        <div id="don-success" class="don-feedback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Thank you so much! Reference: <span class="don-ref"></span></span>
+                        </div>
+                        <div id="don-error" class="don-feedback">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <span>Something went wrong. Please try again.</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- /.donation-widget -->
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dion Gabriel L. Tabanao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Core scripts -->
+    <script src="script.js"></script>
+    <script src="github-projects.js"></script>
+
+    <!-- API #2: EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- API #3: Leaflet.js (OpenStreetMap) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <!-- Feature scripts -->
+    <script src="contact-form.js"></script>
+    <script src="donation.js"></script>
+
+</body>
+</html>
