@@ -4,7 +4,7 @@ A personal portfolio website built with vanilla HTML, CSS, and JavaScript, showc
 
 ---
 
-## 📋 Project Overview
+##  Project Overview
 
 This portfolio is a fully responsive, single-page website designed to highlight the developer's background, technical skills, and featured projects. It features smooth scroll animations, a split-screen hero layout, an interactive project gallery, a live contact form, an embedded map, and a simulated payment widget.
 
@@ -18,7 +18,7 @@ The project integrates three external APIs to demonstrate real-world web develop
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 TABANAO PORTFOLIO/
